@@ -57,9 +57,36 @@
     background:transparent;
     border:none;
 }
+/*NAVBAR RESPONSIVE MEDIA QUERIES*/
+@media (min-width: 768px) {#altcollapse{
+    display: none;
+  }}
+
+
+@media (min-width: 992px) { #altcollapse{
+    display: none;
+  }}
+
+
+@media (min-width: 1200px) {#altcollapse{
+    display: none;
+  }}
+@media (max-width: 575.98px) { #actions{
+  display:none;
+} }
+
+
+@media (max-width: 767.98px) {#actions{
+  display:none;
+}}   
  
 
 #ul1{
     font-style: italic;
     color:black;
+}
+
+/*LOGIN AND REGISTER PAGE STYLES*/
+.accounts_form_header{
+    text-align:center;
 }

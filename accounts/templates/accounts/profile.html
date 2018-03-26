@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% load bootstrap_tags %}
+{% block content %}
+<div class="row .accounts_form_header">
+      <div class="col-md-6 col-md-offset-3">
+      <h1>Profile</h1>
+    </div>
+  </div>
+  <div class="row" >
+      <div class="col-md-12">
+    
+    <p>You are logged in as {{ user.email }} </p>
+        
+    </div>
+    
+  </div>
+  <span><a href={% url 'home' %}> Return to Homepage</a></span>
+{% endblock %}
