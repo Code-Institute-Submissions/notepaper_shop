@@ -1,23 +1,43 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from products.models import Cart_items,Product,Coupon
-from .forms import Cart_itemsForm,CouponForm
-from .models import Cart_items,Coupon,Product
+from products.models import Product
+from .forms import ProductForm
+from .models import Product
 
 # Create your views here.
 def pens_list(request):
-    cart_items=Cart_items.objects.filter(item_class='PRODUCT',item_type='PEN')
+    products=Product.objects.filter(item_type='PEN')
     
-    return render(request, 'products/product_list.html',{'cart_items':cart_items})
+    return render(request, 'products/product_list.html',{'products':products})
 
 def pencils_list(request):
-    cart_items=Cart_items.objects.filter(item_class='PRODUCT',item_type='PENCIL')
+    products=Product.objects.filter(item_type='PENCIL')
 
-    return render(request, 'products/product_list.html',{'cart_items':cart_items})
+    return render(request, 'products/product_list.html',{'products':products})
 
 def paper_list(request):
-    cart_items=Cart_items.objects.filter(item_class='PRODUCT',item_type='PAPER')
+    products=Product.objects.filter(item_type='PAPER')
     
-    return render(request, 'products/product_list.html',{'cart_items':cart_items})
+    return render(request, 'products/product_list.html',{'products':products})
+    
+def new_product(request):
+    print("*****")
+    print(request.method)
+    if request.method=='POST':
+        form=ProductForm(request.POST,request.FILES)
+     
+        if form.is_valid():
+            products=form.save(commit=False)
+            
+           
+            products.save()
+           
+            
+            
+            return redirect('home')
+    else:
+        
+        form=ProductForm()
+    return render(request, 'products/new_product.html',{'form':form})
     
 
 

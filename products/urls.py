@@ -5,10 +5,10 @@ from .views import *
 
 
 urlpatterns = [
-    url(r'^pens_list', pens_list, name="pens_list"),
-    url(r'^pencils_list', pencils_list, name="pencils_list"),
-    url(r'^paper_list', paper_list, name="paper_list"),
-    
+    url(r'^pens_list', pens_list, name='pens_list'),
+    url(r'^pencils_list', pencils_list, name='pencils_list'),
+    url(r'^paper_list', paper_list, name='paper_list'),
+     url(r'^new_product', new_product, name='new_product'),
   
      
    
