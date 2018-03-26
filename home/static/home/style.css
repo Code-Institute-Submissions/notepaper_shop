@@ -1,0 +1,65 @@
+/*NAVBAR STYLES*/
+#nav1{
+  margin-bottom:0px;
+ 
+  background:rgba(233,228,223,0.7);
+  border:none;
+  
+}
+#nav2{
+  
+  background:white;
+  border-bottom:1px,solid,grey;
+}
+#ul1 > li > a{
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 20px;
+    text-align:center;
+    color:black;
+}
+#actions > li > a{
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 20px;
+    text-align:center;
+}
+.navbar {min-height:30px !important;
+    
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+}
+.navbar-brand{
+    font-family: 'Bungee Outline', cursive;
+    font-size:30px;
+    margin-right:20px;
+}
+.navbar-nav{
+  font-family: 'Source Sans Pro', sans-serif;
+  
+  
+}
+
+.navbar-right{
+     font-family: 'Source Sans Pro', sans-serif;
+}
+.categories{
+    margin-right:50px;
+    color:black;
+}
+.searchform {
+    border:none;
+    
+    background:transparent;
+    width:1000px;
+}
+.searchicon{
+    background:transparent;
+    border:none;
+}
+ 
+
+#ul1{
+    font-style: italic;
+    color:black;
+}
