@@ -3,12 +3,15 @@
  <div class="container-fluid">
    <div class="row">
        <div class="col-md-6 col-md-offset-2">
-           <h1>Pens </h1><p>20 results</p>
+           
+           <h1>{{ item_type }}</h1>
+           
+           <p>20 results</p>
          </div>
          </div>
          <div class="row">
     <div id="filter" class="col-md-9 col-md-offset-2">
-        <p>Order By: Price↓|Price↑|Newest</p>
+        <p>Order By:<a href='{% url order_high_low %}'>Price↓</a>|<a href='{% url order_low_high %}'>Price↑</a>|<a href='{% url order_newest_latest %}'>Newest</a></p>
         </div>
         </div>
          
@@ -28,6 +31,8 @@
     <div>
         <h3> {{ items.name }}</h3>
         <p> {{ items.price }} </p>
+        
+        
         <p>Add to Cart</p>
         
       </div>
