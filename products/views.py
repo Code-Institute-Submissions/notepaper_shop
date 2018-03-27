@@ -18,14 +18,6 @@ def products_list(request):
     return render(request, 'products/product_list.html', {
         'products': products })
 
-
-    
-    
-    
-    
-
-
-    
 def new_product(request):
    
     if request.method=='POST':
@@ -51,7 +43,15 @@ def view_product(request,id):
     form = ReviewForm()
     return render(request, "products/view_product.html", {'products': products,'review_form':form})
     
+def search_products(request):
+    match = request.GET.get('match')
     
+    if match=='contains':
+        products = Product.objects.filter(name__icontains=request.GET['query'])
+    else:
+        products = Product.objects.filter(name__startswith=request.GET['query'])
+    
+    return render(request, "products/product_list.html", {"products": products})    
     
 
     

@@ -23,7 +23,7 @@ from django.conf import settings
 from cart import urls as cart_urls
 from checkout import urls as urls_checkout
 from reviews import urls as urls_reviews
-
+from products.views import search_products
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name='home'),
@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^cart/', include(cart_urls)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^reviews/', include(urls_reviews)),
+    url(r'^search', search_products, name='search'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     
     
