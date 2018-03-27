@@ -22,6 +22,7 @@ from django.views.static import serve
 from django.conf import settings
 from cart import urls as cart_urls
 from checkout import urls as urls_checkout
+from reviews import urls as urls_reviews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,6 +31,7 @@ urlpatterns = [
     url(r'^products/', include(products_urls)),
     url(r'^cart/', include(cart_urls)),
     url(r'^checkout/', include(urls_checkout)),
+    url(r'^reviews/', include(urls_reviews)),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     
     

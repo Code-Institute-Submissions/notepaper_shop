@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from products.models import Product
 from .forms import ProductForm
 from .models import Product
+from reviews.forms import ReviewForm
 
 # Create your views here.
 def products_list(request):
@@ -47,8 +48,8 @@ def new_product(request):
 
 def view_product(request,id):
     products = get_object_or_404(Product, pk=id)
-    
-    return render(request, "products/view_product.html", {'products': products})
+    form = ReviewForm()
+    return render(request, "products/view_product.html", {'products': products,'review_form':form})
     
     
     
