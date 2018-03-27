@@ -90,3 +90,16 @@
 .accounts_form_header{
     text-align:center;
 }
+/*PRODUCT LIST PAGE STYLES*/
+.cart_button{
+    background:transparent;
+    border:none;
+    font-size: 10px
+}
+.cart_name{
+    font-size: 15px
+}
+
+.cart_price{
+    font-size:10px;
+}

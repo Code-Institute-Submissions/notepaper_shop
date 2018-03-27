@@ -39,7 +39,7 @@ def checkout(request):
         payment_form = MakePaymentForm()
         context = {'order_form': order_form, 'payment_form': payment_form, 'publishable': 'whatever' }
         cart = request.session.get('cart', {})
-        discount = request.session.get('discount', {'percent': 0})
+        discount = request.session.get('discount', 0)
         cart_items_and_total = get_cart_items_and_total(cart, discount)
         context.update(cart_items_and_total)
 
