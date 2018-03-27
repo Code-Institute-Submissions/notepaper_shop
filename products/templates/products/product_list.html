@@ -11,7 +11,7 @@
          </div>
          <div class="row">
     <div id="filter" class="col-md-9 col-md-offset-2">
-        <p>Order By:<a href='{% url order_high_low %}'>Price↓</a>|<a href='{% url order_low_high %}'>Price↑</a>|<a href='{% url order_newest_latest %}'>Newest</a></p>
+        <p>Order By:<a href='/products/products_list/?{{ request.GET.urlencode }}&order=-price'>Price↓</a>|<a href='/products/products_list/?{{ request.GET.urlencode }}&order=price'>Price↑</a>|<a href='/products/products_list/?{{ request.GET.urlencode }}&order=created_date'>Newest</a></p>
         </div>
         </div>
          
