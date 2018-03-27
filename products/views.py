@@ -14,9 +14,9 @@ def products_list(request):
             filters = request.GET.get('filter', 'item_type')
             order = request.GET.get('order', 'price')
             products = products.filter(item_type=filters).order_by(order)
-    
+            product_count=products.count()
     return render(request, 'products/product_list.html', {
-        'products': products })
+        'products': products,'product_count':product_count ,'item_type':filters })
 
 def new_product(request):
    

@@ -17,6 +17,9 @@
     text-align:center;
     color:black;
 }
+.navbar-default .navbar-nav>li>a{
+    color:black;
+}
 #actions > li > a{
     padding-top:5px !important; padding-bottom:0 !important;
     height: 20px;
@@ -102,4 +105,28 @@
 
 .cart_price{
     font-size:10px;
+}
+.filters{
+    margin-right:10px;
+    
+}
+.filters a {
+    color:black;
+    
+}
+.product_count{
+    text-align: right
+}
+/*HOMEPAGE STYLES*/
+.homeimage{
+    display: block;
+    margin: 0 auto ;
+    width:80%;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.newarrivals{
+    text-align: center;
+     font-family: 'Source Sans Pro', sans-serif;
+     margin-bottom: 15px
 }
