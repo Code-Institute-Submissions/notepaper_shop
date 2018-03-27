@@ -9,6 +9,7 @@ urlpatterns = [
    
     url(r'^products_list/$', products_list, name='products_list'),
      url(r'^new_product$', new_product, name='new_product'),
+     url(r'^view_product/(\d+)', view_product, name='view_product'),
   
     
     ]
