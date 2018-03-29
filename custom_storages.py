@@ -6,3 +6,7 @@ class MediaStorage(S3BotoStorage):
     
 class StaticStorage(S3BotoStorage):
     location = settings.STATICFILES_LOCATION
+    
+    
+    
+

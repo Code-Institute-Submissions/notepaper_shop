@@ -7,6 +7,7 @@ from reviews.forms import ReviewForm
 # Create your views here.
 def products_list(request):
     products=Product.objects.all()
+    product_count=products.count()
     if request.method=='GET' and 'filter' in request.GET:
         filters = request.GET['filter']
         if filters is not None and filters != '':
@@ -14,10 +15,14 @@ def products_list(request):
             filters = request.GET.get('filter', 'item_type')
             order = request.GET.get('order', 'price')
             products = products.filter(item_type=filters).order_by(order)
-            product_count=products.count()
-    return render(request, 'products/product_list.html', {
-        'products': products,'product_count':product_count ,'item_type':filters })
-
+            
+        return render(request, 'products/product_list.html', {
+            'products': products,'product_count':product_count ,'item_type':filters })
+    else:
+        return render(request,'products/product_list.html',{
+            'products':products,'product_count':product_count
+        })
+        
 def new_product(request):
    
     if request.method=='POST':
