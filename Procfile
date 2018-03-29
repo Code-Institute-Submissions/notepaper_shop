@@ -1,1 +1,1 @@
-web: gunicorn notepaper_shop.wsgi:application
+web: gunicorn notepaper_app.wsgi:application
