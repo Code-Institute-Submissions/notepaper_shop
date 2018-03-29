@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['notepaper-shop-agill1.c9users.io']
+ALLOWED_HOSTS = ['notepaper-shop-agill1.c9users.io','notepaper-shop.herokuapp.com']
 
 
 # Application definition
