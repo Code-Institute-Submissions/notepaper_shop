@@ -1,20 +1,39 @@
+
 {% extends 'home/base.html' %}
 {% load bootstrap_tags %}
 {% block content %}
 
-       <div class="row" id="image">
+       <div class="row" >
+           <div class="col-md-6 col-md-offset-3 prod_desc">
+       <h1>{{ products.name }}</h1>    
+       </div>
     <div class="col-md-6 col-md-offset-3">
-        {{ products.name }}
-          {{ products.description}}
-          {{ products.price }}   
-    
-    
-    <form action="{% url 'add_to_cart' %}" method="post">
+        <div class="row">
+         <div class="col-md-6"> 
+        
+         {% if products.image %}
+     <img src="{{MEDIA_URL}}{{products.image}}" class="img-responsive"></img>
+ {% endif %}
+ </div>  
+ <div class="col-md-6">
+     €{{ products.price }}
+     
+     <h3>Product Description </h3>
+   {{ products.description}}  
+   <div class="add_cart_form">
+      <form action="{% url 'add_to_cart' %}" method="post">
               {% csrf_token %}
               <input type="hidden" id="id" name="id" value="{{products.id}}"/>
-              <input type="hidden" id="quantity" name="quantity" value="1"/>
-              <input class="btn btn-success" type="submit" value="Add To Cart"/>
+              Quantity:<input type="number" id="quantity" name="quantity"/>
+              <input class="btn" type="submit" value="Add To Cart"/>
             </form> 
+            </div>
+    
+ </div>
+    </div>    
+         
+    
+ 
              {% include "reviews/_show_reviews.html" %}
 
               {% if user.is_authenticated %}

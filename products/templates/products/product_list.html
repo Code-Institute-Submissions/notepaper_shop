@@ -32,16 +32,19 @@
        {% if items.image %}
      <img src="{{MEDIA_URL}}{{items.image}}" class="img-responsive"></img>
  {% endif %}
-      
+       <div class="cart_button_div">
+        <button type="button" class="cart_button"><a href=>Add to Cart</a></button>
+        </div>
+        
     </div>
     <div>
-        <h3 class="cart_name"> {{ items.name }}</h3>
+     
+        
+  
+             
+  <h3 class="cart_name"> {{ items.name }}</h3>
         <p class="cart_price"> {{ items.price }} </p>
-        
-        
-        <button type="button" class="cart_button">Add to Cart</button>
- 
-        
+       
       </div>
         </div>
          {% if forloop.counter|divisibleby:4 %}

@@ -3,16 +3,43 @@
 {% block content %}
 <div class="row .accounts_form_header">
       <div class="col-md-6 col-md-offset-3">
-      <h1>Profile</h1>
+      <h1> Profile</h1>
     </div>
   </div>
-  <div class="row" >
-      <div class="col-md-12">
+<div class="responsive_profile_nav">
+      <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+   Your Account ▼
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Something</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Something</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Something else here</a></li>
     
-    <p>You are logged in as {{ user.email }} </p>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Something else</a></li>
+  </ul>
+</div>
+</div>
+    <div class="col-md-3 profile_nav_div">
+    <h1 class="account_info">Your Account</h1>
+    <p>Something</p>
+     <p>Something</p>
+      <p>Something</p>
+       <p>Something</p>
+        <p>Something</p>
         
     </div>
+      <div class="col-md-9 ">
+    
+    <p>You are logged in as {{ user.email }} </p>
+    
+      <span><a href={% url 'home' %}> Return to Homepage</a></span>  
+    </div>
     
   </div>
-  <span><a href={% url 'home' %}> Return to Homepage</a></span>
+  
 {% endblock %}

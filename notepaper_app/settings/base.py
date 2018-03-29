@@ -131,3 +131,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLISHABLE_KEY")
 STRIPE_SECRET = os.environ.get("STRIPE_SECRET_KEY")
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
