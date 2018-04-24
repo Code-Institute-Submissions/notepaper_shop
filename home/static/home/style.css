@@ -2,20 +2,32 @@
 #nav1{
   margin-bottom:0px;
  
-  background:rgba(233,228,223,0.7);
+  background:rgba(0,0,0,0.9);
   border:none;
   
+  
 }
+.searchbox{
+    border:1px solid black;
+    border-radius:0%;
+    
+}
+
 #nav2{
   
   background:white;
-  border-bottom:1px,solid,grey;
+  
+}
+.navbar-default {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid black;
 }
 #ul1 > li > a{
     padding-top:5px !important; padding-bottom:0 !important;
     height: 20px;
     text-align:center;
-    color:black;
+    color:white;
+   font-family: 'Josefin Sans', sans-serif;
 }
 .navbar-default .navbar-nav>li>a{
     color:black;
@@ -33,7 +45,8 @@
 
 }
 .navbar-brand{
-    font-family: 'Bungee Outline', cursive;
+    font-family: 'Comfortaa', cursive;
+
     font-size:30px;
     margin-right:20px;
 }

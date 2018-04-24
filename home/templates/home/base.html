@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
      <link rel="stylesheet" href="{% static 'home/style.css' %}">
      <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Damion|Montserrat|Sacramento|Source+Sans+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Josefin+Sans" rel="stylesheet">
      {% endblock styles %}
      {% block head_js %}
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -23,7 +24,7 @@
   <div class="container-fluid">
     
     <ul class="nav navbar-nav navbar-left" id="ul1">
-      <li ><a href="#">10% OFF THROUGH MONTH END ENTER COUPON EASTER1!!!!! </a></li>
+      <li ><a href="#">10% OFF ENTER COUPON SUMMER1!!!!! </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" id="actions">
       <li><a href="#">REGISTER|LOGIN|WISHLIST</a></li>
@@ -54,15 +55,13 @@
     
       </ul>
      <form action={% url 'search' %} class="navbar-form navbar-nav">
-                <input class="form-control" type="text" placeholder="Search" name="query" />
+                <input class="form-control searchbox" type="text" placeholder="Search" name="query" />
                 <div class="form-group">
-                <input type="radio" name="match" value="contains" checked> Contains<br>
+                <input type="hidden" name="match" value="contains" checked> <br>
                 </div>
-                <div class="form-group">
-                <input type="radio" name="match" value="begins"> Begins With<br>
-                </div>
+               
                 
-                <input class="btn btn-default" type="submit" value="search" />
+               
             </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><i class="fas fa-shopping-cart"></i>

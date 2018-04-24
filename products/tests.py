@@ -18,8 +18,15 @@ class ProductViewTests(TestCase):
         product.save()
             
         response = self.client.get('/products/view_product/1')
+        print ("code:",response.status_code)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "products/view_product.html")    
             
-            
+    def test_get_new_product(self):
+        response=self.client.get('/products/new_product')
+        print ("code:",response.status_code)
+        self.assertEqual(response.status_code,200)
+        self.assertTemplateUsed(response,'products/new_product.html')
           
+          
+    
