@@ -107,33 +107,8 @@
     text-align:center;
 }
 /*PRODUCT LIST PAGE STYLES*/
-.cart_button_div{
-     display: flex;
-  justify-content: center;
-}
-.cart_button{
-    background:orange;
-    border:1px solid black;
-    font-size: 20px;
 
-    
-}
-.cart_button a{
-    color:black;
-    text-align: center;
-    padding:55px;
-}
-.cart_button a:hover{
-    color:black;
-    text-decoration: none
-}
-.cart_name{
-    font-size: 15px
-}
 
-.cart_price{
-    font-size:10px;
-}
 .filters{
     margin-right:10px;
     
@@ -145,13 +120,124 @@
 .product_count{
     text-align: right
 }
+.itemtitle{
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: 10px
+}
+.cart_name{
+font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  margin-top:5px;
+}
+.cart_price{
+font-family: 'Roboto', sans-serif;
+font-size: 15px
+}
+.imagecontainer{
+    border-bottom: 1px solid lightgrey
+}
+.heartitem{
+     margin-top:5px;
+    font-size: 25px;
+    
+    height:100px;
+    display: flex;
+    
+    justify-content: flex-end;
+    margin-left: 50px
+}
+
+.addcartbutton{
+ text-decoration: none;
+  color: #000000;
+  
+}
+.addcartbuttondiv{
+height:50px;
+width:300px;
+ text-align: center;
+
+  font-size: 0.8em;
+ 
+  line-height: 46px;
+  letter-spacing: 1.5px;
+  background-color: rgba(255,255,255,1);
+  border:1px solid black;
+  font-weight: 500;
+ 
+  
+ 
+}
+.addcartbuttondiv:hover{
+  background:rgba(0,0,0,0.9);
+       color: #ffffff;
+        text-decoration: none;
+}
+.addcartbutton:hover{
+  
+        text-decoration: none;
+}
+
 /*HOMEPAGE STYLES*/
 .homeimage{
     display: block;
     margin: 0 auto ;
     width:80%;
-    padding-top:15px;
-    padding-bottom:15px;
+    margin-top:30px;
+    
+    height:500px;
+    
+}
+.homeimage1{
+    
+    margin-right:1px;
+    
+   
+    
+}
+.homeimage2{
+   
+    margin-left:1px;
+    
+   
+    
+}
+.headertext{
+    background-color: rgba(196, 195, 208,1);
+    height:500px;
+    margin-top:30px;
+    margin-left: 0px;
+    margin-right:0px;
+}
+.headerline1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size:30px;
+    margin-top: 20px;
+
+}
+.headerline2{
+    font-family: 'Bitter', serif;
+    text-align: center;
+    font-size:70px;
+    margin-top: 100px;
+}
+.headerline3{
+ 
+ font-family: 'Montserrat', sans-serif;
+font-size: 30px; 
+text-align: center;
+ margin-top: 100px;
+ border:5px double white;
+ width:200px;
+ height:50px;
+
+ 
+}
+.headerline3case{
+    display: flex;
+     justify-content: center;
+    align-items:center;
 }
 .newarrivals{
     text-align: center;
@@ -170,7 +256,74 @@
 #quantity{
     width:50px;
 }
+.productdesccartbutton{
+    margin-top: 10px
+}
 
+hr{
+    border-color: black
+}
+.namedesc{
+    font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.pricedesc{
+       font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.desctitledesc{
+      font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+   
+}
+.descdesc{
+     font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+}
+.quantdesc{
+      font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+
+}
+.addwishlistbutton{
+ text-decoration: none;
+  color: white;
+  
+}
+.addwishlistdiv{
+height:50px;
+width:300px;
+ text-align: center;
+
+  font-size: 0.8em;
+ 
+  line-height: 46px;
+  letter-spacing: 1.5px;
+  background-color: rgba(169,20,25,1);
+  border:1px solid black;
+  font-weight: 500;
+ 
+  
+ 
+}
+.addwishlistdiv:hover{
+  background:rgba(255,255,255,0.9);
+       color: black;
+        text-decoration: none;
+}
+.addwishlistbutton:hover{
+  
+        text-decoration: none;
+}
+
+button.addcartbutton{
+    border:none;
+    background-color: none
+}
+button.addwishlistbutton{
+    border:none;
+    background-color: none
+}
 /*PROFILE PAGE */
 .account_info{
     font-size: 20px
@@ -225,4 +378,4 @@ padding-right:40px;
 
 }
 
-
+/*CART STYLES*/

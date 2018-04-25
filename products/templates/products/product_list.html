@@ -2,7 +2,7 @@
 {% block content %}
  <div class="container-fluid">
    <div class="row">
-       <div class="col-md-6 col-md-offset-2">
+       <div class="col-md-6 col-md-offset-2 itemtitle">
            {% if item_type == "PEN" or item_type == "PENCIL" %}
            <h1>{{ item_type }}S</h1>
            {% else %}
@@ -28,24 +28,29 @@
           {% for items in products %}
             
         <div class="product col-sm-3">
-             <div>
+             <div class="imagecontainer">
        {% if items.image %}
-     <img src="{{MEDIA_URL}}{{items.image}}" class="img-responsive"></img>
+     <img src="{{MEDIA_URL}}{{items.image}}" class="img-responsive itemimage"></img>
+     
  {% endif %}
-       <div class="cart_button_div">
-        <button type="button" class="cart_button"><a href=>Add to Cart</a></button>
-        </div>
+       
         
     </div>
-    <div>
+    <div class="row">
      
         
   
-             
+   <div class="col-sm-3 pricenameitem">         
   <h3 class="cart_name"> {{ items.name }}</h3>
         <p class="cart_price"> {{ items.price }} </p>
-       
+       </div>
+       <div class="col-sm-6 heartitem">         
+  <i class="far fa-heart"></i>
+       </div>
       </div>
+      
+       <a href="#" class="addcartbutton"><div class="addcartbuttondiv">Add to Cart</div></a>
+       
         </div>
          {% if forloop.counter|divisibleby:4 %}
         </div><div class="row">

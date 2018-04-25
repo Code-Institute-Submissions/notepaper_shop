@@ -4,9 +4,7 @@
 {% block content %}
 
        <div class="row" >
-           <div class="col-md-6 col-md-offset-3 prod_desc">
-       <h1>{{ products.name }}</h1>    
-       </div>
+
     <div class="col-md-6 col-md-offset-3">
         <div class="row">
          <div class="col-md-6"> 
@@ -16,19 +14,27 @@
  {% endif %}
  </div>  
  <div class="col-md-6">
-     €{{ products.price }}
+     <h2 class="namedesc">{{ products.name }}</h2>
+     <h2 class="pricedesc">€{{ products.price }}</h2>
      
-     <h3>Product Description </h3>
-   {{ products.description}}  
+ 
+   
    <div class="add_cart_form">
       <form action="{% url 'add_to_cart' %}" method="post">
               {% csrf_token %}
               <input type="hidden" id="id" name="id" value="{{products.id}}"/>
-              Quantity:<input type="number" id="quantity" name="quantity"/>
-              <input class="btn" type="submit" value="Add To Cart"/>
-            </form> 
+              <h2 class="quantdesc">Quantity:</h2><input type="number" id="quantity" name="quantity"/>
+             <div class="productdesccartbutton">
+               <button type="submit" value="Submit"class="addcartbutton"><div class="addcartbuttondiv">ADD TO CART</div></button>
+               </div>
+            </form>
+            
+               <div class="productdesccartbutton">
+               <button type="submit" value="Submit"class="addwishlistbutton"><div class="addwishlistdiv">ADD TO WISHLIST</div></button>
+               </div>
             </div>
-    
+            <h2 class="desctitledesc">Description</h2>
+       <p class="descdesc">{{ products.description}}</p>
  </div>
     </div>    
          
