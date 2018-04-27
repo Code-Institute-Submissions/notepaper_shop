@@ -52,37 +52,6 @@ def update_quantity(request,id):
 
     return redirect('view_cart')
     
-# def apply_coupon(request):
-   
-#     if request.method=='POST':
-        
-        
-#             if Coupon.objects.filter(code=request.POST['code']).exists():
-#                 cart = request.session.get('cart', {})
-#                 context = get_cart_items_and_total(cart)
-#                 q=Coupon.objects.get(code=request.POST['code'])
-                
-#                 total=context['total']
-#                 total=Decimal(total-(total*(q.discount))).quantize(Decimal('.01'))
-#                 cart_items = []
-#                 for item_id, item_quantity in cart.items():
-#                     this_product = get_object_or_404(Product, pk=item_id)
-#                     this_total = this_product.price * Decimal(item_quantity)
-#                     this_item = {
-#                         'product_id': item_id, 
-#                         'image': this_product.image,
-#                         'name': this_product.name,
-#                         'quantity': item_quantity,
-#                         'price': this_product.price,
-#                         'total': this_total,
-#                     }
-#                     cart_items.append(this_item)
-#                     request.session['cart'] = cart  
-                
-#                 return render(request,"cart/view_cart.html",{'cart_items': cart_items,'total': total})
-                 
-#             else:
-#                 return redirect('view_cart')
-                
+
     
     

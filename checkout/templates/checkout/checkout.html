@@ -12,11 +12,12 @@
   <script type="text/javascript" src="{% static 'checkout/stripe.js' %}"></script>
 {% endblock %}
 {% block content %}
-{% include 'cart/_show_cart.html' %}
 
-    <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+    <div class="row">
+      <div class="col-sm-6 checkoutformdiv">
+         <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}" id="checkoutform">
         
-    <legend>Payment Details</legend>
+    <legend class="checkoutlegend">Payment Details</legend>
 
     <div id="credit-card-errors" style="display:none">
       <div class="alert-message block-message error" id="stripe-error-message"></div>
@@ -36,4 +37,53 @@
     </div>
 
     </form>
+      </div>
+     <div class="col-sm-3">
+     <div class="ordersummary">
+     <h3 class="ordersummaryheader">Order Summary</h3>
+     <table class="summarytable">
+    
+    <tbody>
+       
+
+        <tr class="summaryrow">
+            <td class="summarytitlerow">SUBTOTAL</td>
+            <td class="summarynumberrow">€{{total}}</td>
+        </tr>
+         <tr class="summaryrow">
+            <td class="summarytitlerow">SHIPPING</td>
+            <td class="summarynumberrow">€0.00</td>
+        </tr>
+         <tr class="summaryrow">
+            <td class="summarytitlerow">TAX</td>
+            <td class="summarynumberrow">€0.00</td>
+        </tr>
+         <tr class="summaryrow">
+            <td class="summarytitlerow"><strong>TOTAL</strong></td>
+            <td class="summarynumberrow"><strong>€{{total}}</strong></td>
+        </tr>
+    </tbody>
+</table>
+<div class="summarycheckoutbutton">
+               <button type="submit" value="Submit"class="addcartbutton" form="checkoutform" name="commit"><div class="addcartbuttondiv">SUBMIT PAYMENT</div></button>
+               </div>
+  <div class="hrdiv">
+   <hr>
+   </div>
+   <h3 class="ordersummaryheader">Coupon</h3>
+   <div class="coupondiv">
+   <form action="{% url 'apply_coupon' %}" method="post">
+        
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text" name="code" class="couponinput"/>
+          <button type="submit" value="Submit"class="couponbutton">APPLY</button>
+        </div>
+</form>
+</div>
+     </div>
+     
+ </div>
+    </div>
+   
 {% endblock %}

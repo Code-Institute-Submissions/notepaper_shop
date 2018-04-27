@@ -1,6 +1,11 @@
+<div class="row">
+ <div class="col-sm-6">
+<div class="cartpagetitle">
+<h1>Cart</h1>
+</div>
 <table class="table">
     <thead>
-        <tr>
+        <tr class="tableheader">
             <th></th>    
             <th>Product</th>    
             <th>Quantity</th>    
@@ -11,31 +16,29 @@
     </thead>
     <tbody>
         {% for item in cart_items %}
-        <tr>
+        <tr class="tablerow">
             <td><img width="150" height="75" src="{{MEDIA_URL}}{{item.image}}"/></td>    
             <td>{{ item.name }}</td>    
             <td><form method="post" action="{% url 'update_quantity' item.product_id %}">
                 {% csrf_token %}
-                <input type="number" value="{{item.quantity}}" id="quantity" name="quantity"/>
-                <input type="submit" class="" value="Update"/>
+                <input type="number" value="{{item.quantity}}" id="quantity" name="quantity" min="1" required/>
+               
+               <button type="submit" value="Submit"class="updatebutton">UPDATE</button>
+              
                 </form></td>    
             <td>€{{ item.price }}</td>
             <td>€{{ item.total}}</td>
             <td><form method="post" action="{% url 'remove_from_cart' item.product_id %}">
                 {% csrf_token %}
-                <input type="submit" class="btn btn-success" value="Remove"/>
+                <button type="submit" value="Submit"class="updatebutton">REMOVE</button>
                 </form>
             </td>
         </tr>
         {% endfor %}
 
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><strong>Total:</strong></td>
-            <td><strong>€{{total}}</strong></td>
-            <td></td>
-        </tr>
+      
     </tbody>
 </table>
+</div>
+ {% include 'cart/_order_summary.html' %}
+</div>   
