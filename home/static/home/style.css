@@ -5,6 +5,7 @@
 
     background: rgba(0, 0, 0, 0.9);
     border: none;
+    padding-top: 5px
 
 
 }
@@ -88,7 +89,16 @@
     background: transparent;
     border: none;
 }
-
+#nav1 .nav>li>a {
+   
+    display: inline;
+    color:white;
+}
+#nav1 .nav>li>span {
+   
+    display: inline;
+    color:white;
+}
 /*NAVBAR RESPONSIVE MEDIA QUERIES*/
 
 @media (min-width: 768px) {
@@ -387,6 +397,11 @@ button.addwishlistbutton {
     background-color: none
 }
 
+.reviewstitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
 /*PROFILE PAGE */
 
 .account_info {
@@ -445,10 +460,12 @@ button.addwishlistbutton {
 }
 
 /*CART STYLES*/
-.updatebutton{
+
+.updatebutton {
     background-color: none;
-    border:1px solid black;
+    border: 1px solid black;
 }
+
 .ordersummary {
     margin-top: 65px;
     margin-left: 100px;
@@ -459,7 +476,8 @@ button.addwishlistbutton {
     letter-spacing: 1.1px;
     border: 1px solid black;
 }
-.ordersummaryheader{
+
+.ordersummaryheader {
     margin-left: 50px
 }
 
@@ -506,54 +524,126 @@ button.addwishlistbutton {
 }
 
 .summarynumberrow {
- padding-bottom: 25px;
+    padding-bottom: 25px;
     padding-top: 25px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
 
 }
-.summarycheckoutbutton{
+
+.summarycheckoutbutton {
     margin-top: 20px;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     font-size: 25px
-    
 }
 
-.hrdiv{
+.hrdiv {
     margin-top: 20px;
-      margin-left: 50px;
-      margin-right: 25px;
+    margin-left: 50px;
+    margin-right: 25px;
 }
-.coupondiv{
+
+.coupondiv {
     margin-left: 50px
 }
-.couponbutton{
+
+.couponbutton {
     background-color: none;
-    border:1px solid black;
+    border: 1px solid black;
     font-size: 15px
 }
-.couponinput{
-    border:1px solid black;
-    height:25px;
-    width:200px;
-    font-size:15px;
+
+.couponinput {
+    border: 1px solid black;
+    height: 25px;
+    width: 200px;
+    font-size: 15px;
 }
 
 /*CHECKOUT STYLES*/
 
-.checkoutlegend{
+.checkoutlegend {
     border-bottom: 1px solid black
 }
 
-.checkoutformdiv{
+.checkoutformdiv {
     margin-left: 50px;
     font-family: 'Roboto', sans-serif;
-     letter-spacing: 1.1px;
-    
+    letter-spacing: 1.1px;
+
 }
 
- .form-control{
-    border:1px solid black;
+.form-control {
+    border: 1px solid black;
     border-radius: 0%
+}
+
+
+/*LOGIN PAGE*/
+
+#loginbutton {
+    margin: auto;
+    width: 50%;
+
+
+}
+
+#loginform .form-control {
+
+    margin: auto;
+    width: 50%
+}
+
+.logintitle {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.1px;
+}
+
+#loginform label {
+    display: block;
+    max-width: 50%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    margin: auto;
+}
+
+#loginbuttondiv {
+    width: 455px;
+    padding-left: 15px
+}
+
+.loginextra {
+
+    margin: auto;
+    width: 50%
+}
+
+.loginbreak {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 70%;
+}
+
+
+
+.loginsignupdiv{
+    margin: auto;
+    width: 50%;
+   
+  
+  
+}
+
+.loginsignup{
+      display:flex;
+    justify-content:center;
+      font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.1px;
+    margin-bottom: 15px
+}
+.logincreateaccount{
+      display:flex;
+    justify-content:center;
 }

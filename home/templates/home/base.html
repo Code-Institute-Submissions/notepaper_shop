@@ -27,10 +27,11 @@
   <div class="container-fluid">
     
     <ul class="nav navbar-nav navbar-left" id="ul1">
-      <li ><a href="#">10% OFF ENTER COUPON SUMMER1!!!!! </a></li>
+      <li ><a href="#">10% OFF ENTER COUPON SUMMER1!!!!!</a></li>
+     
       </ul>
       <ul class="nav navbar-nav navbar-right" id="actions">
-      <li><a href="#">REGISTER|LOGIN|WISHLIST</a></li>
+      <li><a href="{% url 'register' %}" class="headeraccountlink">REGISTER</a><span>|</span><a href="{% url 'login' %}" class="headeraccountlink">LOGIN</a></li>
       </ul>
     
   </div><!-- /.container-fluid -->
@@ -67,7 +68,13 @@
                
             </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fas fa-shopping-cart"></i>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+             {% include 'cart/_show_cart.html' %}
+          </ul>
+        </li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i>({{ quantsum }})
         </a></li>
         <li><a href="#"><i class="far fa-heart"></i></a></li>
          </ul>
