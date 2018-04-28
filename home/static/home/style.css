@@ -25,6 +25,7 @@
 .navbar-default {
     background-color: #f8f8f8;
     border-bottom: 1px solid black;
+    border-top:1px solid black;
 }
 
 #ul1>li>a {
@@ -33,7 +34,7 @@
     height: 20px;
     text-align: center;
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Cinzel', serif;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -57,14 +58,20 @@
 }
 
 .navbar-brand {
-    font-family: 'Comfortaa', cursive;
+ font-family: 'Cinzel', serif;
 
-    font-size: 30px;
+    font-size: 50px;
     margin-right: 20px;
 }
-
+.navbar-default .navbar-brand {
+    color: black;
+}
+.navbar-default .navbar-brand:hover {
+    color: black;
+}
 .navbar-nav {
     font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1.1px;
 
 
 }
@@ -98,6 +105,19 @@
    
     display: inline;
     color:white;
+}
+#nav3{
+    border:none;
+    margin-bottom:0px;
+    background-color:white;
+   
+}
+#nav3 .navbar-brand{
+     width:100%;
+    display:flex;
+    justify-content:center;
+  padding-top:50px;
+  height:auto;
 }
 /*NAVBAR RESPONSIVE MEDIA QUERIES*/
 
@@ -229,38 +249,14 @@
 
 /*HOMEPAGE STYLES*/
 
-.homeimage {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 30px;
-
-    height: 500px;
-
-}
-
-.homeimage1 {
-
-    margin-right: 1px;
 
 
-
-}
-
-.homeimage2 {
-
-    margin-left: 1px;
-
-
-
-}
 
 .headertext {
     background-color: rgba(196, 195, 208, 1);
     height: 500px;
     margin-top: 30px;
-    margin-left: 0px;
-    margin-right: 0px;
+    
 }
 
 .headerline1 {

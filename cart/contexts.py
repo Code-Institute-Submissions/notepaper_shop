@@ -6,6 +6,4 @@ def get_quant_count(request):
     for item_quantity in cart.items():
      quantsum+=item_quantity[1]
     return{ 'quantsum':quantsum }
-
-   
     
