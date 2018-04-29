@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect,get_object_or_404
+from django.http import HttpResponseRedirect
 from products.models import Product
 from cart.utils import get_cart_items_and_total
 from coupon.forms import CouponForm
@@ -35,7 +36,23 @@ def add_to_cart(request):
     
     request.session['cart'] = cart   
 
-    return redirect('home')
+    return redirect('view_product',id)
+    
+def add_to_cart_product_list(request):
+    id = request.POST['id']
+    quantity = int(request.POST['quantity'])
+
+    cart = request.session.get('cart', {})
+    cart[id] = cart.get(id, 0) + quantity
+    
+    request.session['cart'] = cart   
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'),'view_product',id)   
+    
+    
+    
+    
+    
     
 def remove_from_cart(request, id):
     cart = request.session.get('cart', {})

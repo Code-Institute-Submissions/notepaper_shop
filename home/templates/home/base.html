@@ -24,6 +24,7 @@
      {% endblock head_js %}
 </head>
 <body>
+    <div class="navbar-fixed-top">
   <nav class="navbar navbar-default" id="nav1">
   <div class="container-fluid">
     
@@ -31,10 +32,25 @@
       <li ><a href="#">10% OFF ENTER COUPON SUMMER1!!!!!</a></li>
      
       </ul>
-      <ul class="nav navbar-nav navbar-right" id="actions">
-      <li><a href="{% url 'register' %}" class="headeraccountlink">REGISTER</a><span>|</span><a href="{% url 'login' %}" class="headeraccountlink">LOGIN</a></li>
-      </ul>
-    
+      
+    <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}"> PROFILE</a></li>
+                    <li><span>|</span></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> LOGOUT</a></li>
+                    
+                       
+                       
+                   
+                    {% else %}
+                    <li><a href="{% url 'register' %}">REGISTER</a></li>
+                     <li><span>|</span></li>
+                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> LOGIN</a></li>
+                    {% endif %}
+                   
+                   
+                   
+                </ul>
   </div><!-- /.container-fluid -->
 </nav>     
   <nav class="navbar navbar-default" id="nav3">
@@ -64,9 +80,9 @@
     <div class="collapse navbar-collapse" id=collapsing2>
       <ul class="nav navbar-nav">
           
-        <li><a href='/products/products_list/?filter=PEN&order=created_date' class="categories">Pens </a></li>
-        <li><a href='/products/products_list/?filter=PENCIL&order=created_date'  class="categories">Pencils</a></li>
-        <li><a href='/products/products_list/?filter=PAPER&order=created_date'  class="categories">Paper</a></li>
+        <li><a href='/products/products_list/?filter=PEN&order=created_date' class="categories">PENS </a></li>
+        <li><a href='/products/products_list/?filter=PENCIL&order=created_date'  class="categories">PENCILS</a></li>
+        <li><a href='/products/products_list/?filter=PAPER&order=created_date'  class="categories">PAPER</a></li>
         
     
       </ul>
@@ -95,6 +111,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
+</div>
 {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -104,7 +121,7 @@
             </div>
         </div>
     {% endif %}
-<div>
+<div class="pageshift">
   
 </div>
  {% block content %} {% endblock %}

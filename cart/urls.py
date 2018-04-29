@@ -8,6 +8,8 @@ urlpatterns = [
     url(r'^remove/(\d+)$', remove_from_cart, name='remove_from_cart'),
     url(r'^update/(\d+)$', update_quantity, name='update_quantity'),
     url(r'^coupon/apply$',apply_coupon,name="apply_coupon"),
+     url(r'^addc/$', add_to_cart_product_list, name='add_to_cart_product_list'),
+    
    
   
     

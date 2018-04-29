@@ -4,20 +4,25 @@
 
   <div class="row accounts_form_header">
       <div class="col-md-6 col-md-offset-3">
-      <h1>Create a new Account</h1>
+      <h1 class="logintitle">Create a new Account</h1>
     </div>
   </div>
   <div class="row" >
       <div class="col-md-6 col-md-offset-3">
-     <form role="form" method="post">
+     <form role="form" method="post" class="loginform">
        
         {% csrf_token %}
         {{ form | as_bootstrap }}
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create account</button>
+           <div class="productdesccartbutton" id="loginbutton">
+               <button type="submit" value="Submit"class="addcartbutton"><div class="addcartbuttondiv" id="loginbuttondiv">CREATE ACCOUNT</div></button>
+               </div>
         </div>
     </form>
-         <span><a href={% url 'home' %}> Return to Homepage</a></span>
+         <div class="loginextra">
+     
+         <p><a href={% url 'home' %}> Return to Homepage</a></p>
+         </div>
     </div>
   </div>
 

@@ -30,7 +30,7 @@
         <div class="product col-sm-3">
              <div class="imagecontainer">
        {% if items.image %}
-     <img src="{{MEDIA_URL}}{{items.image}}" class="img-responsive itemimage"></img>
+     <a href="{% url 'view_product' items.id %}"><img src="{{MEDIA_URL}}{{items.image}}" class="img-responsive itemimage"></img></a>
      
  {% endif %}
        
@@ -49,7 +49,14 @@
        </div>
       </div>
       
-       <a href="#" class="addcartbutton"><div class="addcartbuttondiv">ADD TO CART</div></a>
+       <form action="{% url 'add_to_cart_product_list' %}" method="post">
+              {% csrf_token %}
+              <input type="hidden" id="id" name="id" value="{{items.id}}"/>
+              <input type="hidden" id="quantity" name="quantity" value="1"/>
+             <div class="productdesccartbutton">
+               <button type="submit" value="Submit"class="addcartbutton"><div class="addcartbuttondiv">ADD TO CART</div></button>
+               </div>
+            </form>
        
         </div>
          {% if forloop.counter|divisibleby:4 %}

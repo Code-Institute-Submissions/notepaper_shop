@@ -1,9 +1,13 @@
+/*ADJUST FOR FIXED NAV*/
+.pageshift{
+    margin-top: 200px
+}
 /*NAVBAR STYLES*/
 
 #nav1 {
     margin-bottom: 0px;
 
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
     border: none;
     padding-top: 5px
 
@@ -19,6 +23,7 @@
 #nav2 {
 
     background: white;
+  
 
 }
 
@@ -83,6 +88,7 @@
 .categories {
     margin-right: 50px;
     color: black;
+    letter-spacing: 1.5px;
 }
 
 .searchform {
@@ -119,6 +125,8 @@
   padding-top:50px;
   height:auto;
 }
+
+
 /*NAVBAR RESPONSIVE MEDIA QUERIES*/
 
 @media (min-width: 768px) {
@@ -249,8 +257,15 @@
 
 /*HOMEPAGE STYLES*/
 
-
-
+.alert-success {
+    color: grey;
+    background-color: white;
+    border: none;
+    text-align:right;
+    margin-top: 50px
+    
+   
+}
 
 .headertext {
     background-color: rgba(196, 195, 208, 1);
@@ -585,7 +600,7 @@ button.addwishlistbutton {
 
 }
 
-#loginform .form-control {
+.loginform .form-control {
 
     margin: auto;
     width: 50%
@@ -596,7 +611,7 @@ button.addwishlistbutton {
     letter-spacing: 1.1px;
 }
 
-#loginform label {
+.loginform label,.help-block {
     display: block;
     max-width: 50%;
     margin-bottom: 5px;

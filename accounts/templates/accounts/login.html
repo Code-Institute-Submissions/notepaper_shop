@@ -9,7 +9,7 @@
   </div>
   <div class="row " >
       <div class="col-md-6 col-md-offset-3">
-      <form role="form" method="post" id="loginform">
+      <form role="form" method="post" class="loginform">
       
         {% csrf_token %}
         {{ form | as_bootstrap }}
@@ -27,7 +27,7 @@
          <hr class="loginbreak">
          <div class="loginsignupdiv">
         <h1 class="loginsignup">Sign Up</h1>
-            <a href="#" class="addcartbutton logincreateaccount"><div class="addcartbuttondiv">CREATE AN ACCOUNT</div></a>
+            <a href="{% url 'register' %}" class="addcartbutton logincreateaccount"><div class="addcartbuttondiv">CREATE AN ACCOUNT</div></a>
             </div>
     </div>
   </div>
