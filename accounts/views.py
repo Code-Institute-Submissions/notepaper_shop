@@ -3,6 +3,7 @@ from django.contrib import auth,messages
 from .forms import UserLoginForm,UserRegistrationForm
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
 def logout(request):
     auth.logout(request)
@@ -63,3 +64,6 @@ def register(request):
         form = UserRegistrationForm()
 
     return render(request, 'accounts/register.html', {'form': form})
+    
+    
+

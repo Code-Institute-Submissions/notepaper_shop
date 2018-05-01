@@ -175,7 +175,9 @@
 }
 
 /*PRODUCT LIST PAGE STYLES*/
-
+.fa-heart:hover{
+    color: red;
+}
 .filters {
     margin-right: 10px;
 
@@ -416,7 +418,9 @@ button.addwishlistbutton {
 /*PROFILE PAGE */
 
 .account_info {
-    font-size: 20px
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+     letter-spacing: 1.1px;
 }
 
 .profile_nav_div {
