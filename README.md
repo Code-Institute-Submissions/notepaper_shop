@@ -17,7 +17,5 @@ This project is an online stationery store.The logic and design decisions are de
 * [heroku]() - Deployment
 
 
-The decision was made not to make the site responsive as the dashboard is meant to be viewed on a large screen. 
-
 
 
