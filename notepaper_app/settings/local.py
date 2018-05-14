@@ -6,4 +6,5 @@ MEDIA_ROOT='media'
 STATIC_URL = '/static/'
 STATIC_ROOT='staticfiles'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+SENDGRID_API_KEY = os.environ["SENDGRID_API_KEY"]
