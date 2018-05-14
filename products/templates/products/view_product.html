@@ -29,19 +29,7 @@
                </div>
             </form>
             
-               <div class="productdesccartbutton">
-               <form action="{% url 'add_to_wishlist' %}" method="post">
-                   
-                   
-              {% csrf_token %}
-             
-             <div class="productdesccartbutton">
-                 {{wishlist_form.product.as_hidden}}
-                <input type="hidden" id="ids" name="ids" value="{{products.id}}"/>
-               <button type="submit" value="Submit"class="addcartbutton"><div class="addcartbuttondiv">ADD TO WISHLIST</div></button>
-               </div>
-            </form>
-               </div>
+               
             </div>
             <h2 class="desctitledesc">Description</h2>
        <p class="descdesc">{{ products.description}}</p>

@@ -44,20 +44,7 @@
   <h3 class="cart_name"> {{ items.name }}</h3>
         <p class="cart_price"> {{ items.price }} </p>
        </div>
-       <div class="col-sm-6 heartitem">  
-      <form action="{% url 'add_to_wishlist' %}" method="post" id="wishlistsubmit">
-                   
-              {{wishlist_form.as_hidden}}     
-              {% csrf_token %}
-             
-             <div class="productdesccartbutton">
-                <input type="hidden" id="ids" name="ids" value="{{items.id}}"/>
-             
-               <button type="submit" value="Submit"class="addcartbutton"><i class="far fa-heart" id="wishlisted"></i></button>
-               </div>
-            </form>
-
-       </div>
+       
       </div>
       
        <form action="{% url 'add_to_cart_product_list' %}" method="post">
