@@ -45,7 +45,7 @@
         <p class="cart_price"> {{ items.price }} </p>
        </div>
        <div class="col-sm-6 heartitem">  
-      <form action="{% url 'add_to_wishlist' %}" method="post">
+      <form action="{% url 'add_to_wishlist' %}" method="post" id="wishlistsubmit">
                    
               {{wishlist_form.as_hidden}}     
               {% csrf_token %}
@@ -53,7 +53,7 @@
              <div class="productdesccartbutton">
                 <input type="hidden" id="ids" name="ids" value="{{items.id}}"/>
              
-               <button type="submit" value="Submit"class="addcartbutton"><i class="far fa-heart"></i></button>
+               <button type="submit" value="Submit"class="addcartbutton"><i class="far fa-heart" id="wishlisted"></i></button>
                </div>
             </form>
 
@@ -70,6 +70,7 @@
             </form>
        
         </div>
+        
          {% if forloop.counter|divisibleby:4 %}
         </div><div class="row">
         {% endif %}
@@ -79,5 +80,42 @@
    
   </div>
   </div>
+  <script>
+   $(document).ready(function() {
+       $("#wishlistsubmit").submit(function(event){
+           console.log("form submitted!");
+                 });
+                 function submit_wishlist() {
+    console.log("Wishlist is working!") // sanity check
+    $.ajax({
+        url : "{% url 'add_to_wishlist' %}", // the endpoint
+        type : "POST", // http method
+        data : { wishlistdata : $('#wishlistsubmit').val() }, // data sent with the post request
+       
+        // handle a successful response
+        success : function(json) {
+            
+            console.log(json); // log the returned json to the console
+             
+    console.log("success"); // another sanity check
+            console.log("success"); // another sanity check
+        },
+
+        // handle a non-successful response
+        
+    });
+    
+};
+              
+                 
+                 
+                 
+            });
+           
+            
+    
+
+
+  </script>
   
 {% endblock %}

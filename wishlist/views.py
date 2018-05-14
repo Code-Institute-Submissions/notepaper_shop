@@ -3,10 +3,13 @@ from wishlist.models import Wishlist
 from products.models import Product
 from wishlist.forms import WishlistForm
 from django.contrib.auth.decorators import login_required
+import json
+from django.http import JsonResponse
+from django.http import HttpResponse
 # Create your views here.
  
 def add_to_wishlist(request):
-    
+  response_data = {} 
   if not request.user.is_authenticated:
         return redirect('login')
         
@@ -17,8 +20,8 @@ def add_to_wishlist(request):
             list_item.user=request.user
             list_item.product_id=request.POST['ids']
             list_item.save()
-            return redirect('home')
-    
+            
+            return HttpResponse(status=204)
 @login_required()      
 def view_wishlist(request):
      
