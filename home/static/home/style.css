@@ -258,6 +258,12 @@
 }
 
 /*HOMEPAGE STYLES*/
+.headerline3 a{
+    color:white;
+}
+.headerline3 a:hover{
+    color:white;
+}
 .indexitems{
     margin-top:50px;
 }
