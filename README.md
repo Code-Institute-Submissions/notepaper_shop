@@ -1,7 +1,7 @@
 
 # Notepaper Shop
 
-This project is an online stationery store.The logic and design decisions are described more fully in the design document
+This project is an online stationery store.
 
 
 
